@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script src="/javascripts/value.js" id="data"></script>
+</head>
+
+
+<body>
+  <h1 style="margin-left: 20px; margin-top: 20px; margin-bottom: 30px;">Auto Postion Calculator</h1>
+
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-3">
+        <span style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">lower</span>
+          </div>
+          <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1" id="lower">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">outer</span>
+          </div>
+          <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1" id="outer">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">inner</span>
+          </div>
+          <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1" id="inner">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <span style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">lower</span>
+          </div>
+          <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">outer</span>
+          </div>
+          <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">inner</span>
+          </div>
+          <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <span style="margin: 10px">Robot 3:<input type="text" value="A" class="form-control"></span>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">lower</span>
+          </div>
+          <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">outer</span>
+          </div>
+          <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">inner</span>
+          </div>
+          <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <span style="margin-bottom: 5px;" id="points">Total Points: </span>
+        <p style="margin-bottom: 5px;" type="text" id="test" value="Hello"></p>
+        <span style="margin-bottom: 5px;" id="capacity">Total Capacity:</span><br>
+        <p1 style="margin-bottom: 5px;" type="text" id="test" value="Hello"></p1>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-3">
+        <span style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">lower</span>
+          </div>
+          <input type="text" class="lower1 form-control" aria-label="number" aria-describedby="basic-addon1" id="lower1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">outer</span>
+          </div>
+          <input type="text" class="outer1 form-control" aria-label="number" aria-describedby="basic-addon1" id="outer1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">inner</span>
+          </div>
+          <input type="text" class="inner1 form-control" aria-label="number" aria-describedby="basic-addon1" id="inner1">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <span style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">lower</span>
+          </div>
+          <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">outer</span>
+          </div>
+          <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">inner</span>
+          </div>
+          <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <span style="margin: 10px">Robot 3:<input type="text" value="C" class="form-control"></span>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">lower</span>
+          </div>
+          <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">outer</span>
+          </div>
+          <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">inner</span>
+          </div>
+          <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <span style="margin-bottom: 5px;" id="points">Total Points: </span><br>
+        <p2 style="margin-bottom: 5px;" type="text" id="test" value="Hello"></p2><br>
+        <span style="margin-bottom: 5px;" id="capacity">Total Capacity:</span><br>
+        <p3 style="margin-bottom: 5px;" type="text" id="test" value="Hello"></p3>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>
