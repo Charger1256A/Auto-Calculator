@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -12,170 +11,223 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>  
+  <!-- Path to jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-
+  <!-- Path to Popper - it is for dropsdowns etc in bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <!-- Path to bootsrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
   <script src="/javascripts/value.js" id="data"></script>
 </head>
-
-
 <body>
   <h1 style="margin-left: 20px; margin-top: 20px; margin-bottom: 30px;">Auto Postion Calculator</h1>
-
   <div class="container">
-    <div class="row" id="row">
+    <div class="row ">
       <div class="col-md-3">
-        <span style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">lower</span>
+            <span class="input-group-text">Match Key:</span>
           </div>
-          <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1" id="lower">
+          <input type="text" class="lower form-control" class="form-control">
         </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">outer</span>
+        <div style="margin-bottom: 20px" class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Blue Alliance</a>
+            <a class="dropdown-item" href="#">Red Alliance</a>
           </div>
-          <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1" id="outer">
         </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">inner</span>
-          </div>
-          <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1" id="inner">
-        </div>
-      </div>
-      <div class="col-md-3">
-        <span style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">lower</span>
-          </div>
-          <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">outer</span>
-          </div>
-          <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">inner</span>
-          </div>
-          <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-      </div>
-      <div class="col-md-3">
-        <span style="margin: 10px">Robot 3:<input type="text" value="A" class="form-control"></span>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">lower</span>
-          </div>
-          <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">outer</span>
-          </div>
-          <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">inner</span>
-          </div>
-          <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-      </div>
-      <div class="col-md-3">
-        <span style="margin-bottom: 5px;" id="points">Total Points: </span>
-        <p style="margin-bottom: 5px;" type="text" id="test" value="Hello"></p>
-        <span style="margin-bottom: 5px;" id="capacity">Total Capacity:</span><br>
-        <p1 style="margin-bottom: 5px;" type="text" id="test" value="Hello"></p1>
       </div>
     </div>
-    <hr>
-  </div>
-  <!-- <style type="text/css">
-    .form-control1 extends .form-control {
-      asdfds
-    }
-  </style> -->
-  <div class="container">
-    <div class="row row1">
-      <div class="col-md-3">
-        <span style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">lower</span>
+    <div class="container">
+      <div class="row" id="row">
+        <div class="col-md-3">
+          <span style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">lower</span>
+            </div>
+            <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1"
+              id="lower">
           </div>
-          <input type="text" class="lower1 form-control form-control1" aria-label="number" aria-describedby="basic-addon1"
-            id="lower1">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">outer</span>
+            </div>
+            <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1"
+              id="outer">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">inner</span>
+            </div>
+            <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1"
+              id="inner">
+          </div>
         </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">outer</span>
+        <div class="col-md-3">
+          <span style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">lower</span>
+            </div>
+            <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1">
           </div>
-          <input type="text" class="outer1 form-control form-control1" aria-label="number" aria-describedby="basic-addon1"
-            id="outer1">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">outer</span>
+            </div>
+            <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">inner</span>
+            </div>
+            <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1">
+          </div>
         </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">inner</span>
+        <div class="col-md-3">
+          <span style="margin: 10px">Robot 3:<input type="text" value="A" class="form-control"></span>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">lower</span>
+            </div>
+            <input type="text" class="lower form-control" aria-label="number" aria-describedby="basic-addon1">
           </div>
-          <input type="text" class="inner1 form-control form-control1" aria-label="number" aria-describedby="basic-addon1"
-            id="inner1">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">outer</span>
+            </div>
+            <input type="text" class="outer form-control" aria-label="number" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">inner</span>
+            </div>
+            <input type="text" class="inner form-control" aria-label="number" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <span style="margin-bottom: 5px;" id="points">Total Points: </span>
+          <p style="margin-bottom: 5px;" type="text" id="test"></p>
+          <span style="margin-bottom: 5px;" id="capacity">Total Capacity:</span><br>
+          <p1 style="margin-bottom: 5px;" type="text" id="test"></p1>
         </div>
       </div>
-      <div class="col-md-3">
-        <span style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">lower</span>
-          </div>
-          <input type="text" class="lower1 form-control form-control1" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">outer</span>
-          </div>
-          <input type="text" class="outer1 form-control form-control1" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">inner</span>
-          </div>
-          <input type="text" class="inner1 form-control form-control1" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-      </div>
-      <div class="col-md-3">
-        <span style="margin: 10px">Robot 3:<input type="text" value="C" class="form-control"></span>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">lower</span>
-          </div>
-          <input type="text" class="lower1 form-control form-control1" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">outer</span>
-          </div>
-          <input type="text" class="outer1 form-control form-control1" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">inner</span>
-          </div>
-          <input type="text" class="inner1 form-control form-control1" aria-label="number" aria-describedby="basic-addon1">
-        </div>
-      </div>
-      <div class="col-md-3">
-        <span style="margin-bottom: 5px;" id="points">Total Points: </span><br>
-        <p2 style="margin-bottom: 5px;" type="text" id="test1"></p2><br>
-        <span style="margin-bottom: 5px;" id="capacity">Total Capacity:</span><br>
-        <p3 style="margin-bottom: 5px;" type="text" id="test1"></p3>
-      </div>
+      <hr>
     </div>
-  </div>
-</body>
-
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-3">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Match Key:</span>
+            </div>
+            <input type="text" class="lower form-control" class="form-control">
+          </div>
+          <div style="margin-bottom: 20px" class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Blue Alliance</a>
+              <a class="dropdown-item" href="#">Red Alliance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row1 row">
+          <div class="col-md-3">
+            <span style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">lower</span>
+              </div>
+              <input type="text" class="lower1 form-control form-control1" aria-label="number"
+                aria-describedby="basic-addon1" id="lower1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">outer</span>
+              </div>
+              <input type="text" class="outer1 form-control form-control1" aria-label="number"
+                aria-describedby="basic-addon1" id="outer1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">inner</span>
+              </div>
+              <input type="text" class="inner1 form-control form-control1" aria-label="number"
+                aria-describedby="basic-addon1" id="inner1">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <span style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">lower</span>
+              </div>
+              <input type="text" class="lower1 form-control form-control1" aria-label="number"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">outer</span>
+              </div>
+              <input type="text" class="outer1 form-control form-control1" aria-label="number"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">inner</span>
+              </div>
+              <input type="text" class="inner1 form-control form-control1" aria-label="number"
+                aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <span style="margin: 10px">Robot 3:<input type="text" value="C" class="form-control"></span>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">lower</span>
+              </div>
+              <input type="text" class="lower1 form-control form-control1" aria-label="number"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">outer</span>
+              </div>
+              <input type="text" class="outer1 form-control form-control1" aria-label="number"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">inner</span>
+              </div>
+              <input type="text" class="inner1 form-control form-control1" aria-label="number"
+                aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <span style="margin-bottom: 5px;" id="points">Total Points: </span><br>
+            <p2 style="margin-bottom: 5px;" type="text" id="test1"></p2><br>
+            <span style="margin-bottom: 5px;" id="capacity">Total Capacity:</span><br>
+            <p3 style="margin-bottom: 5px;" type="text" id="test1"></p3>
+          </div>
+        </div>
+      </div>
+    </body>
 </html>
