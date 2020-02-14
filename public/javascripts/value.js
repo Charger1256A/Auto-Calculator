@@ -48,7 +48,7 @@ $(document).ready(function () {
                 score1 += innerPoints1;
                 capacity1 += inner1;
             }
-        })
+        });
         parentRow.find('.outer1').each(function () {
             var outer1 = parseInt($(this).val());
             if (!isNaN(outer1)) {
@@ -56,7 +56,7 @@ $(document).ready(function () {
                 score1 += outerPoints1;
                 capacity1 += outer1;
             }
-        })
+        });
         parentRow.find('.lower1').each(function () {
             var lower1 = parseInt($(this).val());
             if (!isNaN(lower1)) {
@@ -64,13 +64,13 @@ $(document).ready(function () {
                 score1 += lowerPoints1;
                 capacity1 += lower1;
             }
-        })
+        });
         console.log(score1);
-        console.log(capacity1)
+        console.log(capacity1);
         $("test1").ready(function () {
             $("p2").text(score1);
             $("p3").text(capacity1);
-        })
+        });
     });
 });
 $(document).ready(function () {
@@ -79,7 +79,7 @@ $(document).ready(function () {
         parentRow.find(".lower2").each(function () {
             const path = $(this).val();
             // const path = "2019qcmo_qm1"
-            fetch(`https://www.thebluealliance.com/api/v3/match/${path}/simple`, {
+            fetch(`https://www.thebluealliance.com/api/v3/match/2019utwv_${path}/simple`, {
                 method: "GET",
                 headers: {
                     'X-TBA-Auth-Key': 'oSSXMWPE2jOJrLTYpgMvgP5BTvbtOJRwR6LSv1ytb0g5FS6RlaWBx70Pw0B8cwvA'
@@ -87,7 +87,7 @@ $(document).ready(function () {
             }).then((response) => response.json()).then(function (data) {
                 $("#blue").click(function () {
                     //alert("blue .click() worked")
-                    var initial = data["alliances"]["blue"]["team_keys"][0]
+                    var initial = data["alliances"]["blue"]["team_keys"][0];
                     var final = initial.replace("frc", "");
                     $("span1").text(final);
                     var initial1 = data["alliances"]["blue"]["team_keys"][1];
@@ -95,19 +95,19 @@ $(document).ready(function () {
                     $("span2").text(final1);
                     var zacharyIsABoT = data["alliances"]["blue"]["team_keys"][2];
                     var AdityaIsAGOD = zacharyIsABoT.replace("frc","");
-                    $("span3").text(AdityaIsAGOD)
+                    $("span3").text(AdityaIsAGOD);
                 });
                 $("#red").click(function () {
                     // alert("red .click() worked")
-                    var initial2 = data["alliances"]["red"]["team_keys"][0]
+                    var initial2 = data["alliances"]["red"]["team_keys"][0];
                     var final2 = initial2.replace("frc", "");
-                    $("span1").text(final2)
-                    var initial3 = data["alliances"]["red"]["team_keys"][1]
+                    $("span1").text(final2);
+                    var initial3 = data["alliances"]["red"]["team_keys"][1];
                     var final3 = initial3.replace("frc", "");
-                    $("span2").text(final3)
-                    var initial4 = data["alliances"]["red"]["team_keys"][2]
+                    $("span2").text(final3);
+                    var initial4 = data["alliances"]["red"]["team_keys"][2];
                     var final4 = initial4.replace("frc", "");
-                    $("span3").text(final4)
+                    $("span3").text(final4);
                 });
                 console.log(data["alliances"]["blue"]["team_keys"]);
 
@@ -118,7 +118,7 @@ $(document).ready(function () {
         var parentRow = $(this).parents(".row3");
         parentRow.find(".lower3").each(function () {
             const path = $(this).val();
-            fetch(`https://www.thebluealliance.com/api/v3/match/${path}/simple`, {
+            fetch(`https://www.thebluealliance.com/api/v3/match/2019utwv_${path}/simple`, {
                 method: "GET",
                 headers: {
                     'X-TBA-Auth-Key': 'oSSXMWPE2jOJrLTYpgMvgP5BTvbtOJRwR6LSv1ytb0g5FS6RlaWBx70Pw0B8cwvA'
@@ -126,7 +126,7 @@ $(document).ready(function () {
             }).then((response) => response.json()).then(function (data) {
                 $("#blue1").click(function () {
                     //alert("blue .click() worked")
-                    var initial5 = data["alliances"]["blue"]["team_keys"][0]
+                    var initial5 = data["alliances"]["blue"]["team_keys"][0];
                     var final5 = initial5.replace("frc", "");
                     $("span4").text(final5);
                     var initial6 = data["alliances"]["blue"]["team_keys"][1];
@@ -138,14 +138,14 @@ $(document).ready(function () {
                 });
                 $("#red1").click(function () {
                     // alert("red .click() worked")
-                    var initial8 = data["alliances"]["red"]["team_keys"][0]
-                    var final8 = initial8.replace("frc","")
+                    var initial8 = data["alliances"]["red"]["team_keys"][0];
+                    var final8 = initial8.replace("frc","");
                     $("span4").text(final8);
-                    var initial9 = data["alliances"]["red"]["team_keys"][1]
-                    var final9 = initial9.replace("frc","")
+                    var initial9 = data["alliances"]["red"]["team_keys"][1];
+                    var final9 = initial9.replace("frc","");
                     $("span5").text(final9);
-                    var initial10 = data["alliances"]["red"]["team_keys"][2]
-                    var final10 = initial10.replace("frc","")
+                    var initial10 = data["alliances"]["red"]["team_keys"][2];
+                    var final10 = initial10.replace("frc","");
                     $("span6").text(final10);
                 });
                 console.log(data["alliances"]["blue"]["team_keys"]);
