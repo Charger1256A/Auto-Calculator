@@ -1,16 +1,5 @@
 // var express = require('express');
-
 $(document).ready(function () {
-    const match = () => {fetch(`https://www.thebluealliance.com/api/v3/match/2019qcmo_qm1/simple`, {
-        method: "GET",
-        headers: {
-            'X-TBA-Auth-Key': 'oSSXMWPE2jOJrLTYpgMvgP5BTvbtOJRwR6LSv1ytb0g5FS6RlaWBx70Pw0B8cwvA'
-        },
-    }).then(response => response).then(success => console.log(success + " it worked")).catch(error => console.log(error))
-}
-(match()).then(snapshot => {
-    console.log(snapshot);
-});
     $(".form-control").on("change paste keyup", function () {
         var parentRow = $(this).parents(".row");
         var score = 0;
@@ -82,5 +71,85 @@ $(document).ready(function () {
             $("p2").text(score1);
             $("p3").text(capacity1);
         })
+    });
+});
+$(document).ready(function () {
+    $(".form-control2").on("change paste keyup", function () {
+        var parentRow = $(this).parents(".row2");
+        parentRow.find(".lower2").each(function () {
+            const path = $(this).val();
+            // const path = "2019qcmo_qm1"
+            fetch(`https://www.thebluealliance.com/api/v3/match/${path}/simple`, {
+                method: "GET",
+                headers: {
+                    'X-TBA-Auth-Key': 'oSSXMWPE2jOJrLTYpgMvgP5BTvbtOJRwR6LSv1ytb0g5FS6RlaWBx70Pw0B8cwvA'
+                }
+            }).then((response) => response.json()).then(function (data) {
+                $("#blue").click(function () {
+                    //alert("blue .click() worked")
+                    var initial = data["alliances"]["blue"]["team_keys"][0]
+                    var final = initial.replace("frc", "");
+                    $("span1").text(final);
+                    var initial1 = data["alliances"]["blue"]["team_keys"][1];
+                    var final1 = initial1.replace("frc","");
+                    $("span2").text(final1);
+                    var zacharyIsABoT = data["alliances"]["blue"]["team_keys"][2];
+                    var AdityaIsAGOD = zacharyIsABoT.replace("frc","");
+                    $("span3").text(AdityaIsAGOD)
+                });
+                $("#red").click(function () {
+                    // alert("red .click() worked")
+                    var initial2 = data["alliances"]["red"]["team_keys"][0]
+                    var final2 = initial2.replace("frc", "");
+                    $("span1").text(final2)
+                    var initial3 = data["alliances"]["red"]["team_keys"][1]
+                    var final3 = initial3.replace("frc", "");
+                    $("span2").text(final3)
+                    var initial4 = data["alliances"]["red"]["team_keys"][2]
+                    var final4 = initial4.replace("frc", "");
+                    $("span3").text(final4)
+                });
+                console.log(data["alliances"]["blue"]["team_keys"]);
+
+            });
+        });
+    });
+    $(".form-control3").on("change paste keyup", function () {
+        var parentRow = $(this).parents(".row3");
+        parentRow.find(".lower3").each(function () {
+            const path = $(this).val();
+            fetch(`https://www.thebluealliance.com/api/v3/match/${path}/simple`, {
+                method: "GET",
+                headers: {
+                    'X-TBA-Auth-Key': 'oSSXMWPE2jOJrLTYpgMvgP5BTvbtOJRwR6LSv1ytb0g5FS6RlaWBx70Pw0B8cwvA'
+                }
+            }).then((response) => response.json()).then(function (data) {
+                $("#blue1").click(function () {
+                    //alert("blue .click() worked")
+                    var initial5 = data["alliances"]["blue"]["team_keys"][0]
+                    var final5 = initial5.replace("frc", "");
+                    $("span4").text(final5);
+                    var initial6 = data["alliances"]["blue"]["team_keys"][1];
+                    var final6 = initial6.replace("frc","");
+                    $("span5").text(final6);
+                    var initial7 = data["alliances"]["blue"]["team_keys"][2];
+                    var final7 = initial7.replace("frc","");
+                    $("span6").text(final7);
+                });
+                $("#red1").click(function () {
+                    // alert("red .click() worked")
+                    var initial8 = data["alliances"]["red"]["team_keys"][0]
+                    var final8 = initial8.replace("frc","")
+                    $("span4").text(final8);
+                    var initial9 = data["alliances"]["red"]["team_keys"][1]
+                    var final9 = initial9.replace("frc","")
+                    $("span5").text(final9);
+                    var initial10 = data["alliances"]["red"]["team_keys"][2]
+                    var final10 = initial10.replace("frc","")
+                    $("span6").text(final10);
+                });
+                console.log(data["alliances"]["blue"]["team_keys"]);
+            });
+        }); 
     });
 });

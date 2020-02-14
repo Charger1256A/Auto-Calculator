@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -11,7 +12,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>  
+    crossorigin="anonymous"></script>
   <!-- Path to jQuery -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -24,18 +25,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
     integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
+  <!-- <script src="js/umd/popper.min.js" type="text/javascript"></script> -->
   <script src="/javascripts/value.js" id="data"></script>
 </head>
+
 <body>
   <h1 style="margin-left: 20px; margin-top: 20px; margin-bottom: 30px;">Auto Postion Calculator</h1>
   <div class="container">
-    <div class="row ">
+    <div class="row2 row">
       <div class="col-md-3">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text">Match Key:</span>
           </div>
-          <input type="text" class="lower form-control" class="form-control">
+          <input type="text" class="lower2 form-control2" class="form-control">
         </div>
         <div style="margin-bottom: 20px" class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -43,8 +46,8 @@
             Dropdown button
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Blue Alliance</a>
-            <a class="dropdown-item" href="#">Red Alliance</a>
+            <a class="dropdown-item" id="blue" href="#">Blue Alliance</a>
+            <a class="dropdown-item" id="red" href="#">Red Alliance</a>
           </div>
         </div>
       </div>
@@ -52,7 +55,7 @@
     <div class="container">
       <div class="row" id="row">
         <div class="col-md-3">
-          <span style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span>
+          <span1 style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span1>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">lower</span>
@@ -76,7 +79,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <span style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span>
+          <span2 style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span2>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">lower</span>
@@ -97,7 +100,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <span style="margin: 10px">Robot 3:<input type="text" value="A" class="form-control"></span>
+          <span3 style="margin: 10px">Robot 3:<input type="text" value="A" class="form-control"></span3>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">lower</span>
@@ -127,13 +130,13 @@
       <hr>
     </div>
     <div class="container">
-      <div class="row ">
+      <div class="row3 row ">
         <div class="col-md-3">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text">Match Key:</span>
             </div>
-            <input type="text" class="lower form-control" class="form-control">
+            <input type="text" class="lower3 form-control3" class="form-control">
           </div>
           <div style="margin-bottom: 20px" class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -141,8 +144,8 @@
               Dropdown button
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Blue Alliance</a>
-              <a class="dropdown-item" href="#">Red Alliance</a>
+              <a class="dropdown-item" id="blue1" href="#">Blue Alliance</a>
+              <a class="dropdown-item" id="red1" href="#">Red Alliance</a>
             </div>
           </div>
         </div>
@@ -150,7 +153,7 @@
       <div class="container">
         <div class="row1 row">
           <div class="col-md-3">
-            <span style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span>
+            <span4 style="margin: 10px">Robot 1:<input type="text" value="A" class="form-control"></span4>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">lower</span>
@@ -174,7 +177,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <span style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span>
+            <span5 style="margin: 10px">Robot 2:<input type="text" value="B" class="form-control"></span5>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">lower</span>
@@ -198,7 +201,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <span style="margin: 10px">Robot 3:<input type="text" value="C" class="form-control"></span>
+            <span6 style="margin: 10px">Robot 3:<input type="text" value="C" class="form-control"></span6>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">lower</span>
@@ -229,5 +232,6 @@
           </div>
         </div>
       </div>
-    </body>
+</body>
+
 </html>
