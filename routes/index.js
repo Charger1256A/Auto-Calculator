@@ -1,14 +1,17 @@
 var express = require('express');
 var router = express.Router();
-const json = require('../matchdata.json');
+const match = require('./tbaAPI');
+const matchdata = require('../matchdata.json');
+// Create list of matches
+var matches = [];
+for(var i in matchdata) {
+  var object = matchdata[i]["match"]
+  matches.push(object)
+}
 
 /* GET home page. */
-
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-  console.log("hello")
+  // console.log(json);
+  res.render('index', { matchdata: JSON.stringify(matchdata), matches: matches });
 });
-router.get('/', function(req, res, next) {
-  res.send('value', { array: json })
-})
 module.exports = router;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -25,10 +26,17 @@
     integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
   <script src="/javascripts/value.js" id="data"></script>
-  <!-- <script src="/routes/tbaAPI.js"></script> -->
+  
 </head>
-<body>
-  <h1 style="margin-left: 20px; margin-top: 20px; margin-bottom: 30px; text-align: center;">Utah Regional Auto Postion Calculator</h1>
+
+<body onload="">
+  <meta content="<%= matchdata %>"" name="matchdata">
+  <meta content="<%= matches %>" name="matches">
+  <meta content="<%= matchdata %>"" name="matchdata1">
+  <meta content="<%= matches %>" name="matches1">
+
+  <h1 style="margin-left: 20px; margin-top: 20px; margin-bottom: 30px; text-align: center;">Utah Regional Auto Postion
+    Calculator</h1>
   <div class="container">
     <div class="row2 row">
       <div class="col-md-3">
@@ -231,4 +239,5 @@
         </div>
       </div>
 </body>
+
 </html>

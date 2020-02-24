@@ -32,11 +32,11 @@ function matchData(eventId) {
         });
     });
 }
-matchData('2019utwv').then(snapshot => {
+matchData('2019casj').then(snapshot => {
     fs.writeFile('matchdata.json', JSON.stringify(snapshot), function (err) {
         if (err) throw err;
         console.log('File is created successfully.');
     });
 });
-exports.matchData = matchData
-exports.pathData = pathData
+exports.matchData = matchData;
+exports.pathData = pathData;
