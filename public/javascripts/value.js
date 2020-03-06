@@ -1,6 +1,5 @@
 // const array = require('matchdata.json');
 // var express = require('express');
-
 $(document).ready(function () {
     $(".form-control").on("change paste keyup", function () {
         var parentRow = $(this).parents(".row");
@@ -75,9 +74,6 @@ $(document).ready(function () {
         });
     });
 });
-
-
-// Configure if statement with API
 $(document).ready(function () {
     $(".form-control2").on("change paste keyup", function () {
         var parentRow = $(this).parents(".row2");
@@ -91,8 +87,9 @@ $(document).ready(function () {
             // ^Meta tag^
             for (var i in matches) {
                 // console.log(`i=${i}, matches[i]=${matches[i]}, path=${path}`)
+                console.log(matches[i])
                 if (matches[i] == path) {
-                    var key = path - 1;
+                    var key = matches[i] - 1;
                     $("#blue").click(function () {
                         $("span1").text(matchdata[key]["blue"][0]);
                         $("span2").text(matchdata[key]["blue"][1]);
@@ -158,16 +155,14 @@ $(document).ready(function () {
             console.log(matchdata1)
                 for (var i in matches1) {
                     if (matches1[i] == path1) {
-                        var key1 = path1 - 1;
-                        console.log("Hello")
+                        var key1 = matches1[i] - 1;
                         console.log(matchdata1[key1]["blue"][0])
-                        $("#blue1").click(function () {
-                            console.log("hi")
+                        $("#blue1").click(function () {                            
                             $("span4").text(matchdata1[key1]["blue"][0]);
                             $("span5").text(matchdata1[key1]["blue"][1]);
                             $("span6").text(matchdata1[key1]["blue"][2]);
                         });
-                        $("#red1").click(function () {
+                        $("#red1a").click(function () {
                             $("span4").text(matchdata1[key1]["red"][0]);
                             $("span5").text(matchdata1[key1]["red"][1]);
                             $("span6").text(matchdata1[key1]["red"][2]);
@@ -175,9 +170,7 @@ $(document).ready(function () {
                     } else {
                         console.log("invalid match key")
                     }
-
                 }
-            
             // if (path.includes(`qm`) && hasNumber.test(path)) {
             //     fetch(`https://www.thebluealliance.com/api/v3/match/2019utwv_${path}/simple`, {
             //         method: "GET",
